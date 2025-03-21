@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0; /* Single light gray background for the body */
+            color: #333;
+        }
+
+        header {
+            background: #d3d3d3; /* Single medium gray background for the header */
+            color: #333;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+        }
+
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center; /* Ensures the image is centered in the circular frame */
+            position: absolute;
+            top: 75px;
+            left: 75px;
+            border: 3px solid white;
+        }
+
+        nav {
+            background: #d3d3d3; /* Single medium gray background for the nav */
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .section-content {
+            background: #ffffff; /* Single white background for sections */
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        .download-button {
+            background: #d3d3d3; /* Single medium gray background for the button */
+            color: #333;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .download-button:hover {
+            background: #c0c0c0; /* Slightly darker gray on hover */
+        }
+
+        .certificate-container {
+            text-align: center;
+        }
+
+        .certificate-container img {
+            width: 80%;
+            max-width: 600px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #d3d3d3; /* Single medium gray background for the footer */
+            color: #333;
+            margin-top: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <img src="pic.jpg" alt="Goutham in front of Christmas tree" class="profile-picture">
+        <h1>Goutham.J</h1>
+        <p>Student</p>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+    </ul>
+</nav>
+
+<section id="about">
+    <div class="section-content">
+        <h2>About Me</h2>
+        <p>I'm a <b>Computer Science student</b> I am Gowtham, a passionate and driven individual with a keen interest in technology and programming. I enjoy exploring new innovations, solving problems, and continuously learning to enhance my skills. Whether it's coding, development, or creative problem-solving, I am always eager to take on new challenges and grow.</p>
+    </div>
+</section>
+
+<section id="education">
+    <div class="section-content">
+        <h2>Education</h2>
+        <p>A.M Jain College, Madras University - CS with AI</p>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="section-content">
+        <h2>Skills</h2>
+        <ul>
+            <li>C++</li>
+            <li>Python</li>
+            <li>Java</li>
+        </ul>
+    </div>
+</section>
+
+<section id="resume">
+    <div class="section-content">
+        <center>
+            <h2>Resume</h2>
+            <a href="resume.pdf" target="_blank" class="download-button">Download CV</a>
+        </center>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Goutham J</p>
+</footer>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
